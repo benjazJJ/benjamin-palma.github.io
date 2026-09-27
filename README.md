@@ -2,13 +2,19 @@
 
 Portafolio web profesional, moderno y minimalista desarrollado con HTML, CSS y JavaScript vanilla.
 
+**Sitio en vivo:** [benjazjj.github.io](https://benjazjj.github.io)
+
+Showcasing expertise in **Automatización & RPA**, **Machine Learning**, **Backend Development** (Java/Spring Boot), **Cloud Computing**, and **Big Data**.
+
 ## 🚀 Características
 
-- **Diseño moderno y profesional** con tema oscuro
-- **Animaciones suaves** y efectos visuales atractivos
+- **Diseño moderno y profesional** con tema oscuro y paleta verde esmeralda
+- **Barra de progreso de scroll** que muestra el avance en la página
+- **Animaciones suaves** y efectos visuales atractivos (staggered, 3D tilt, parallax)
 - **Completamente responsive** - optimizado para móvil, tablet y escritorio
 - **Single Page Application** con navegación suave
-- **Optimizado para rendimiento**
+- **Optimizado para rendimiento** (throttling, Intersection Observer)
+- **Badge "Disponible para trabajar"** con efecto pulsante
 - **Código limpio y mantenible**
 
 ## 📁 Estructura del proyecto
@@ -85,8 +91,9 @@ Luego visita `http://localhost:8000` en tu navegador.
 2. **Edita `styles.css` (líneas 1-30):**
    ```css
    :root {
-       --accent-primary: #00d4ff;      /* Color principal */
-       --accent-secondary: #7000ff;     /* Color secundario */
+       --accent-primary: #10b981;      /* Verde esmeralda */
+       --accent-secondary: #34d399;     /* Verde menta */
+       --accent-tertiary: #6ee7b7;      /* Verde claro */
        /* Modifica estos valores para cambiar el tema */
    }
    ```
@@ -133,24 +140,56 @@ El portafolio es completamente responsive con breakpoints en:
 
 ## 🎭 Animaciones incluidas
 
-- Fade in/up al hacer scroll
+- **Barra de progreso de scroll** en la parte superior
+- Fade in/up al hacer scroll con staggered delay
 - Typing animation en el hero
 - Parallax effect en el fondo
 - Counter animation en estadísticas
-- Hover effects en tarjetas
-- 3D tilt effect en proyectos
+- Hover effects en tarjetas con overlay
+- 3D tilt effect en proyectos y skill cards
 - Smooth scroll navigation
 - Ripple effect en botones
+- Cursor glow effect (desktop)
+- Badge pulsante "Disponible para trabajar"
 
 ## 📦 Despliegue
 
 ### GitHub Pages
 
-1. Sube los archivos a un repositorio de GitHub
-2. Ve a Settings > Pages
-3. Selecciona la rama main y carpeta root
-4. Guarda y espera unos minutos
-5. Tu sitio estará disponible en `https://tu-usuario.github.io/nombre-repo`
+**IMPORTANTE:** Para un sitio de usuario personal, el repositorio debe llamarse exactamente `tuusuario.github.io`
+
+**Despliegue inicial:**
+
+```bash
+# Inicializa el repositorio
+git init
+git add .
+git commit -m "Initial commit"
+
+# Conecta con GitHub (reemplaza con tu usuario)
+git remote add origin https://github.com/tuusuario/tuusuario.github.io.git
+git branch -M main
+git push -u origin main
+```
+
+**Activar GitHub Pages:**
+
+1. Ve a tu repositorio en GitHub
+2. **Settings** > **Pages**
+3. En **Source**: selecciona **main** branch y carpeta **/ (root)**
+4. Click en **Save**
+5. Espera 1-2 minutos
+6. Tu sitio estará en: `https://tuusuario.github.io`
+
+**Actualizar el sitio:**
+
+```bash
+git add .
+git commit -m "Descripción de cambios"
+git push
+```
+
+GitHub Pages se actualizará automáticamente en unos minutos.
 
 ### Netlify
 
@@ -165,6 +204,12 @@ El portafolio es completamente responsive con breakpoints en:
 
 ## 🐛 Solución de problemas
 
+**Error 404 en GitHub Pages:**
+- El nombre del repositorio debe ser **exactamente** `tuusuario.github.io`
+- Ejemplo: `benjazjj.github.io` (no `benjamin-palma.github.io`)
+- Ve a Settings > Renombrar repositorio si es necesario
+- Después actualiza el remote: `git remote set-url origin https://github.com/tuusuario/tuusuario.github.io.git`
+
 **Los iconos no se muestran:**
 - Verifica tu conexión a Internet (Font Awesome se carga desde CDN)
 - Alternativamente, descarga Font Awesome localmente
@@ -177,6 +222,26 @@ El portafolio es completamente responsive con breakpoints en:
 - Asegúrate de tener la etiqueta viewport en el HTML
 - Verifica que todos los archivos CSS estén cargando correctamente
 
+**"remote origin already exists" en Git:**
+- Verifica el remote actual: `git remote -v`
+- Actualiza la URL: `git remote set-url origin https://github.com/tuusuario/tuusuario.github.io.git`
+
+## 🔒 Seguridad del repositorio
+
+**Por defecto, solo tú puedes hacer commits a tu repositorio.** Nadie más puede modificarlo a menos que:
+- Les des acceso como colaborador
+- Aceptes un pull request
+
+**Para proteger tu rama principal:**
+
+1. Ve a **Settings** > **Branches**
+2. Click en **Add branch protection rule**
+3. Branch name pattern: `main`
+4. Marca: **Require pull request reviews before merging**
+5. **Save changes**
+
+Esto previene commits directos, incluso tuyos, requiriendo pull requests para todos los cambios.
+
 ## 📄 Licencia
 
 Este proyecto es de uso libre. Puedes modificarlo y usarlo para tu propio portafolio.
@@ -184,8 +249,9 @@ Este proyecto es de uso libre. Puedes modificarlo y usarlo para tu propio portaf
 ## 👨‍💻 Autor
 
 **Benjamín Palma**
-- Backend Developer especializado en Java, Spring Boot, Cloud y Big Data
-- GitHub: [@benjaminpalma](https://github.com/benjaminpalma)
+- Developer especializado en Automatización & RPA, Machine Learning, Backend (Java/Spring Boot), Cloud y Big Data
+- GitHub: [@benjazJJ](https://github.com/benjazJJ)
+- Sitio web: [benjazjj.github.io](https://benjazjj.github.io)
 
 ---
 
